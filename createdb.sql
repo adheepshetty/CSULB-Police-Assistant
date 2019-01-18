@@ -1,0 +1,13 @@
+drop database if exists PublicSafety;
+create database PublicSafety;
+use PublicSafety;
+drop table if exists incident;
+create table incident(incidentid int,incidenttype text,loc point not null, primary key (incidentid)) engine = MyISAM;
+drop table if exists officer;
+create table officer(badgeno int,officername text, squadno int, pos point not null, primary key (badgeno)) engine = MyISAM;
+drop table if exists route;
+create table route(routeno int, vertices int, street linestring not null , primary key(routeno)) engine = MyISAM;
+drop table if exists zone;
+create table zone(zoneid int , zonename text, squadno int, vertices int, region polygon not null , primary key(zoneid)) engine = MyISAM;                        
+use PublicSafety;
+show tables;

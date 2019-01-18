@@ -1,0 +1,1 @@
+java -classpath .;mysql-connector.jar Hw db.properties q3 4

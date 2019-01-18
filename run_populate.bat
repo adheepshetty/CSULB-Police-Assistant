@@ -1,0 +1,1 @@
+java -classpath .;mysql-connector.jar Populate db.properties incident.txt officer.txt route.txt zone.txt
